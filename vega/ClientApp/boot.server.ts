@@ -7,7 +7,7 @@ import { platformDynamicServer, PlatformState, INITIAL_CONFIG } from '@angular/p
 import { createServerRenderer, RenderResult } from 'aspnet-prerendering';
 import { AppModule } from './app/app.server.module';
 
-enableProdMode();
+//enableProdMode();
 
 export default createServerRenderer(params => {
     const providers = [
