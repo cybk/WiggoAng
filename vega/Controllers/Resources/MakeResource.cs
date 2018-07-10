@@ -10,7 +10,7 @@ namespace vega.Controllers.Resources
 
         public string Name { get; set; }
 
-        public ICollection<Model> Models { get;set; }
+        public ICollection<ModelResource> Models { get;set; }
 
         MakeResource(){
             Models = new Collection<ModelResource>();
