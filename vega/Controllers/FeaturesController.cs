@@ -20,6 +20,7 @@ namespace vega.Controllers
             this.context = context;
         }
 
+         [HttpGet("/api/features")]
         public async Task<ICollection<FeatureResource>> GetFeatures(){
             var features = await context.Features.ToListAsync();
 
