@@ -11,7 +11,7 @@ namespace vega.Models
     {
         public Vehicle()
         {
-            Features = new Collection<VehicleFuture>();
+            Features = new Collection<VehicleFeature>();
         }
 
         public int Id { get; set; }
@@ -35,6 +35,6 @@ namespace vega.Models
 
         public DateTime LastUpdate { get; set; }
 
-        public ICollection<VehicleFuture> Features { get; set; }
+        public ICollection<VehicleFeature> Features { get; set; }
     }
 }
