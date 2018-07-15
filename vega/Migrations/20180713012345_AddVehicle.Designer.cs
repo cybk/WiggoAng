@@ -102,7 +102,7 @@ namespace vega.Migrations
                     b.ToTable("Vehicles");
                 });
 
-            modelBuilder.Entity("vega.Models.VehicleFuture", b =>
+            modelBuilder.Entity("vega.Models.VehicleFuature", b =>
                 {
                     b.Property<int>("VehicleId");
 
@@ -130,7 +130,7 @@ namespace vega.Migrations
                         .HasForeignKey("ModelId");
                 });
 
-            modelBuilder.Entity("vega.Models.VehicleFuture", b =>
+            modelBuilder.Entity("vega.Models.VehicleFeature", b =>
                 {
                     b.HasOne("vega.Models.Feature", "Feature")
                         .WithMany()

@@ -16,7 +16,7 @@ namespace vega.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<VehicleFuture>().HasKey( vf => new { vf.VehicleId, vf.FeatureId });
+            modelBuilder.Entity<VehicleFeature>().HasKey( vf => new { vf.VehicleId, vf.FeatureId });
         }
 
     }
