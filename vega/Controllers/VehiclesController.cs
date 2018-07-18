@@ -67,5 +67,17 @@ namespace vega.Controllers
             await context.SaveChangesAsync();
             return Ok();
         }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetVehicle (int id){
+            var vehicle = await context.Vehicles.Include(v => v.Features).SingleOrDefaultAsync(f => f.Id == id);
+            if (vehicle == null){
+                return NotFound();
+            }
+
+            var vehicleResource = _mapper.Map<Vehicle, VehicleResource>(vehicle);
+
+            return Ok(vehicleResource);
+        }
     }
 }
